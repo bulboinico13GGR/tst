@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pergunta para o meu amor julia</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #naoBtn {
+        background-color: red;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+    }
+    #simBtn {
+        background-color: green;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <h1>Fototeta hoje?</h1>
+    <button id="simBtn" onclick="redirectToYouTube()">Sim</button>
+    <button id="naoBtn" onclick="moveNaoButton()">Não</button>
+
+    <script>
+        function moveNaoButton() {
+            var naoButton = document.getElementById("naoBtn");
+            var screenWidth = window.innerWidth;
+            var screenHeight = window.innerHeight;
+            var newX = Math.random() * (screenWidth - naoButton.offsetWidth);
+            var newY = Math.random() * (screenHeight - naoButton.offsetHeight);
+            naoButton.style.left = newX + "px";
+            naoButton.style.top = newY + "px";
+        }
+
+        function redirectToYouTube() {
+            window.location.href = "https://youtu.be/G7cY4BZyz9E?si=V09IDanW-tLDOeiB";
+            // Substitua "VIDEO_ID" pelo ID do vídeo do YouTube que você deseja redirecionar.
+        }
+    </script>
+</body>
+</html>
